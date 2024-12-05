@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:snapshot/view/dashboard.dart';
+import 'package:snapshot/view/loginui/forgot_password/forgot_password.dart';
 import 'package:snapshot/view/loginui/loginviewmodel.dart';
 import 'package:snapshot/view/signupui/signupviewmodel.dart';
 import 'package:stacked/stacked.dart';
@@ -93,6 +94,9 @@ class Loginview extends StatelessWidget {
                         Align(
                           alignment: Alignment.centerRight,
                           child: InkWell(
+                            onTap: (){  Navigator.push(context, MaterialPageRoute(builder: (BuildContext) {
+                              return ForgotPassword();
+                            }));},
                               child: Text(
                             "Forgot Password?",
                             style: TextStyle(

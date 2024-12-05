@@ -42,6 +42,7 @@ dependencies:
   http:
   icons_plus: ^5.0.0
   animated_botton_navigation: ^0.0.7
+  flutter_otp_text_field: ^1.2.0
 
 dev_dependencies:
   flutter_test:

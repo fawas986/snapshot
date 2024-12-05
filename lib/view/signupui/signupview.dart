@@ -90,6 +90,7 @@ class Signupview extends StatelessWidget {
                           height: 20,
                         ),
                         TextFormField(
+                          obscureText: true,
                           controller: viewModel.passclr,
                           decoration: const InputDecoration(
                               border: OutlineInputBorder(
@@ -110,6 +111,7 @@ class Signupview extends StatelessWidget {
                           height: 20,
                         ),
                         TextFormField(
+                          obscureText: true,
                           controller: viewModel.repassclr,
                           decoration: const InputDecoration(
                               border: OutlineInputBorder(

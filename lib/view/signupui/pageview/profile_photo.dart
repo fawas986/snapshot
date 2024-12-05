@@ -4,6 +4,7 @@ import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:snapshot/view/Homeui/homeview.dart';
+import 'package:snapshot/view/dashboard.dart';
 
 class OnboardingPages extends StatefulWidget {
   @override
@@ -77,7 +78,12 @@ class _OnboardingPagesState extends State<OnboardingPages> {
               children: [
                 TextButton(
                   onPressed: () {
-                    _pageController.jumpToPage(2);
+                    Navigator.of(context).pushAndRemoveUntil(
+                      MaterialPageRoute(
+                        builder: (context) => Dashboard(),
+                      ),
+                          (Route<dynamic> route) => false,
+                    );
                   },
                   child: Text(
                     'Skip',
@@ -97,7 +103,7 @@ class _OnboardingPagesState extends State<OnboardingPages> {
                     } else {
                       Navigator.of(context).pushAndRemoveUntil(
                         MaterialPageRoute(
-                          builder: (context) => Homeview(),
+                          builder: (context) => Dashboard(),
                         ),
                             (Route<dynamic> route) => false,
 
